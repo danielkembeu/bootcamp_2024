@@ -1,0 +1,43 @@
+p {
+    font-style: italic;
+    text-decoration: underline;
+padding: 10px;
+    height: 200px;
+    width: 200px;
+    background-color: green;
+}
+
+
+.flag {
+    height: 300px;
+    width: 600px;
+    border: 2px solid;
+    display: flex;
+
+}
+
+.flag .blue {
+    background-color: blue;
+    height: 100%;
+    width: 33%;
+}
+
+.flag .white {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag .red {
+    background-color: rgb(255, 0, 0);
+    height: 100%;
+    width: 33%;
+}
+
+
+.flag .white img{
+    height: 100px;
+}
