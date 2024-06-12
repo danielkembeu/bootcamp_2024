@@ -61,7 +61,7 @@
 # else:
 #     print("a es plus grand que b")
 
-note = int(input("\nEntre ta moyenne : "))
+# note = int(input("\nEntre ta moyenne : "))
 
 # if note < 8 :
 #     print("\nTu es trop faible !!!")
@@ -75,7 +75,23 @@ note = int(input("\nEntre ta moyenne : "))
 #     print("\n Entre une valeur valide")
     
     
-if  note != 10 and note == 20:
-    print("=========== 1 ==========")
+# if  note != 10 and note == 20:
+#     print("=========== 1 ==========")
+# else:
+#     print("=========== 2 ==========")
+
+# The last exercise of day1
+
+
+nb = int(input("\n Entrer un nombre compris entre 1 et 100 \n"))
+if nb < 1 or nb > 100:
+    print("\n LE nombre n'est pas entre 1 et 100 \n")
 else:
-    print("=========== 2 ==========")
+    if nb % 3 == 0 and nb % 5 == 0:
+        print("\nFizzBuzz \n")
+    elif nb % 3 == 0:
+        print("\nFizz \n")
+    elif nb % 5 == 0:
+        print("\nBuzz \n")
+    else:
+        print("\nCe nombre n'est multiple ni de 5 ni de 3 \n")
