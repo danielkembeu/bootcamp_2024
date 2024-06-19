@@ -1,27 +1,27 @@
  body {
-    background-image: url('./bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    place-items: center;
+     background-image: url('./bg.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: grid;
+     place-items: center;
  }
-
+ 
  form {
-    background-color: white ;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+     background-color: white;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
  }
-
-form button {
-    margin-top: 30px;
-    width: 100%;
-    background: linear-gradient(10deg, #4b83f1, rgb(6, 75, 222));
-    border-width: 0;
-    color: white;
-    padding: 4px;
-    border-radius: 4px;
-}
+ 
+ form button {
+     margin-top: 30px;
+     width: 100%;
+     background: linear-gradient(10deg, #4b83f1, rgb(6, 75, 222));
+     border-width: 0;
+     color: white;
+     padding: 4px;
+     border-radius: 4px;
+ }
