@@ -47,6 +47,7 @@ const YEARS_OF_SERVICE = 6;
  * 
  */
 function getInterval(employeeAge) {
+
     if (employeeAge < 26 || employeeAge > 44) {
         return intervalTags[0];
     } else if (employeeAge >= 26 && employeeAge <= 32) {
@@ -84,6 +85,7 @@ function getContextAmount(intervalLabel, experience) {
  * @returns The message with the total earn of the current employee after a number of years of work inside the entreprise. For instance, in our case it's 6 years.
  */
 function calculateSalary(employeeName, employeeAge) {
+
     let salary = 0;
 
     for (let i = 1; i <= YEARS_OF_SERVICE; i++) {
