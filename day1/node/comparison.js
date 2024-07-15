@@ -19,6 +19,14 @@
  * The salary for the first interval is $4000/month and for the second, $8000/month. Else, it's $3000.
  * 
  * Calculate the salary for Yvan who is 28, for Ben who is 40 and for Tanya who is 31 after 6 years of service in that entreprise.
+ * 
+ * 
+ * 
+ * Dans une entreprise, on recoit un bonus de 10% sur le salaire quand on a entre 26 et 32 ans. On recoit 25% de bonus quand on est entre 36 et 44 ans et aucun bonus pour ceux qui ont moins de 26 ans ou plus de 44 ans.
+ * 
+ * Le salaire for le premier intervalle est de 4000$/mois et pour le second, 8000$/mois. Autrement, c'est 3000$/mois.
+ * 
+ * Calculer le salaire pour Yvan, qui a 28 ans, pour Ben qui a 40 ans et pour Tanya qui a 31 ans, apres 6 ans de service dans cette entreprise.
  */
 
 
@@ -28,7 +36,7 @@
 const bonuses = [0, 0.1, 0.25];
 const salaries = [3000, 4000, 8000];
 
-// default: [< 26 and > 44]
+// default: [< 26 or > 44]
 // pro: [>= 26 and <=32]
 // expert: [>= 36 and <= 44]
 const intervalTags = ['default', 'pro', 'expert'];
@@ -64,15 +72,15 @@ function getInterval(employeeAge) {
  * @param {number} experience
  * @description The current experience amount to calculate the salary. 
  */
-function getContextAmount(intervalLabel, experience) {
+function getAmountForYear(intervalLabel, experience) {
 
     switch (intervalLabel) {
         case "default":
-            return salaries[0] * experience;
+            return salaries[0] * experience * 12;
         case "pro":
-            return salaries[1] * (1 + bonuses[1]) * experience;
+            return salaries[1] * (1 + bonuses[1]) * experience * 12;
         case "expert":
-            return salaries[2] * (1 + bonuses[2]) * experience;
+            return salaries[2] * (1 + bonuses[2]) * experience * 12;
         default:
             return 0;
     }
@@ -91,11 +99,11 @@ function calculateSalary(employeeName, employeeAge) {
     for (let i = 1; i <= YEARS_OF_SERVICE; i++) {
 
         // get the current interval
-        const interval = getInterval(employeeAge);
-        console.log({ interval });
+        const tag = getInterval(employeeAge);
+        console.log({ tag });
 
         // get the fitted current salary:
-        salary += getContextAmount(interval, i); // i => experience amount.
+        salary += getAmountForYear(tag, i); // i => experience amount.
         console.log({ salary });
     }
 
@@ -105,3 +113,5 @@ function calculateSalary(employeeName, employeeAge) {
 console.log(calculateSalary("Yvan", yvanAge));
 console.log(calculateSalary("Ben", benAge));
 console.log(calculateSalary("Tanya", tanyaAge));
+
+

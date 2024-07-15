@@ -1,4 +1,4 @@
-// // number type
+// number type
 // let number = 20;
 
 // // string
@@ -30,19 +30,36 @@
 // CORRECTION:
 
 // Our utility function
-function out(...args) {
-    console.log(...args);
-}
+// function out(...args) {
+//     console.log(...args);
+// }
 
 
 
-// 1.
-let birthYear = 2001;
-let futureYear = 2030; // 2
-let possibleAge = futureYear - birthYear;
+// // 1.
+// let birthYear = 2001;
+// let futureYear = 2030; // 2
+// let possibleAge = futureYear - birthYear;
 
-const log = out;
-log(`I will be ${possibleAge} in ${futureYear}`)
+// const log = out;
+// log(`I will be ${possibleAge} in ${futureYear}`)
 
 
-module.exports = { out };
+// module.exports = { out };
+
+
+
+
+
+
+
+let premierNom = "Josiane";
+let deuxiemeNom = 'Josiane';
+let troisiemeNom = `Josiane`;
+
+console.log(`Bonjour, ${premierNom}`);
+
+
+let salaire;
+
+console.log(typeof salaire);
