@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+
+        <section class="left_side">
+            <img src="./assets/login_image.jpg" alt="">
+        </section>
+
+        <section class="right_side">
+            <h1>Log In</h1>
+            <form>
+                <div class="field">
+                    <label class="field_label" for="username">Email Address</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="field">
+                    <label class="field_label" for="password">Password</label>
+                    <div class="icon_field">
+                        <input type="text" id="password" name="password" required>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-eye">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <div class="remember_me_field">
+                        <input type="checkbox" />
+                        <label for="remember">Remember Information</label>
+                    </div>
+
+                    <a href="./forget-password">Forgot password ?</a>
+                </div>
+
+                <button>Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="./register.html">Sign Up</a></p>
+
+
+            <div class="notification_container">
+                <div class="message" id="notification_success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span>
+                        Login successful. Redirecting...
+                    </span>
+                </div>
+
+                <div class="message" id="notification_error">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-x">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m15 9-6 6" />
+                        <path d="m9 9 6 6" />
+                    </svg>
+                    <span>
+                        Error, something went wrong !
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

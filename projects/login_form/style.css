@@ -1,0 +1,228 @@
+* {
+    font-family: "Poppins", 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* animation: forwards linear; */
+    transition: color 0.3s ease;
+}
+
+
+a {
+    color: #188abe;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+.left_side {}
+
+.left_side img {
+    width: 100%;
+    height: 100%;
+    animation: introduce 2s ease-in-out;
+}
+
+.right_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 120px;
+}
+
+h1 {
+    width: 100%;
+    margin: 20px 0;
+    animation: to-bottom 1s linear;
+}
+
+.field {
+    /* margin: 0 40px; */
+    animation: to-left 1s linear;
+}
+
+.field label {
+    display: block;
+    width: 400px;
+}
+
+.field input {
+    width: 100%;
+}
+
+.field_label {
+    margin-top: 10px;
+}
+
+label {
+    font-size: 11px;
+    margin-left: 6px;
+}
+
+.icon_field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid gray;
+    padding: 0 6px 0 0;
+    border-radius: 2px;
+}
+
+#password {
+    outline: 0;
+    border: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+button {
+    background-color: #188abe;
+    width: 100%;
+    margin: 10px 0;
+    border: 0;
+    padding: 8px 0;
+    outline: 0;
+    border-radius: 6px;
+    color: white;
+    font-size: 10px;
+    transition-duration: 300ms;
+    animation: forwards 100ms linear;
+    animation: to-right 1s linear;
+}
+
+button:hover {
+    background-color: #065d86;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #188abe;
+}
+
+input {
+    outline: 0;
+    padding: 0 6px;
+    transition: 100ms ease-in-out;
+}
+
+input::placeholder {
+    font-size: 10px;
+}
+
+input:focus {
+    border: 2px solid #188abe;
+    border-radius: 6px;
+}
+
+.remember_me_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 10px;
+}
+
+
+@keyframes to-right {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes to-bottom {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes to-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes to-top {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes introduce {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.notification_container {
+    position: absolute;
+    bottom: 60px;
+    right: 40px;
+    width: 300px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 16px 0;
+    padding: 10px;
+    border-radius: 6px;
+    animation: to-left 1s ease-in-out;
+
+}
+
+#notification_error {
+    visibility: hidden;
+}
+
+#notification_success {
+    visibility: hidden;
+}

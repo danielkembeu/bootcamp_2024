@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+
+        <section class="left_side">
+            <img src="./assets/login_image.jpg" alt="">
+        </section>
+
+        <section class="right_side">
+            <h1>Register</h1>
+
+            <form id="register_form">
+                <div class="field">
+                    <label class="field_label" for="reg_username">Username</label>
+                    <input type="text" id="reg_username" name="username" placeholder="Your username">
+                </div>
+
+                <div class="field">
+                    <label class="field_label" for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Your Email">
+                </div>
+
+                <div class="field">
+                    <label class="field_label" for="create_password">Create Password</label>
+                    <div class="icon_field">
+                        <input type="text" id="create_password" name="create_password"
+                            placeholder="Min of 6 characters ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-eye">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="field_label" for="confirm_password">Confirm Password</label>
+                    <div class="icon_field">
+                        <input type="text" id="confirm_password" name="confirm_password"
+                            placeholder="Confirm password">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-eye">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <div class="remember_me_field">
+                        <input type="checkbox" />
+                        <label for="remember">Remember Information</label>
+                    </div>
+
+                    <a href="./forget-password">Forgot password ?</a>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p>Already have an account ? <a href="./index.html">Log In</a></p>
+
+            <div class="notification_container">
+                <div class="message" id="notification_success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span class="notification_title">
+                        Login successful. Redirecting...
+                    </span>
+                </div>
+
+                <div class="message" id="notification_error">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-x">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m15 9-6 6" />
+                        <path d="m9 9 6 6" />
+                    </svg>
+                    <span class="notification_title">
+                        Error, something went wrong !
+                    </span>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

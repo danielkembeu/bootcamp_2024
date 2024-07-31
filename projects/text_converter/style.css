@@ -1,0 +1,67 @@
+* {
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.hero h1 span {
+    color: #403d84;
+}
+
+.hero textarea {
+    width: 600px;
+    height: 250px;
+    background: #e0e0e1;
+    color: #575757;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 40px;
+}
+
+.hero .row {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.row button {
+    padding: 10px 30px;
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    background-color: #403d84;
+    cursor: pointer;
+}
+
+.row select {
+    height: 40px;
+    background-color: #e0e0e1;
+    padding: 0 20px;
+    flex: 1;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    color: gray;
+    appearance: none;
+}

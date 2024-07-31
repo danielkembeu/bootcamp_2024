@@ -1,0 +1,32 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.myAnim {
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.myAnim:hover {
+  filter: drop-shadow(0 0 2em #0284c5aa);
+  /* animation */
+}
+
+@keyframes box-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .myAnim {
+    animation: box-spin infinite 10s ease-in-out;
+  }
+}
+
