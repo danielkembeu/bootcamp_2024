@@ -7,9 +7,14 @@
 
 */
 
+* {
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 500;
+}
+
 p {
-   color: green;
-   font-size: 30px; 
+    color: green;
+    font-size: 30px;
 }
 
 h1 {
@@ -22,19 +27,30 @@ i {
 }
 
 .btn {
-  font-family: "Montserrat", "sans-serif";
-  font-weight: 500; 
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 0;
-  border-radius: 6px;
-  margin: 20px;
-} 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0;
+    border-radius: 6px;
+    margin: 20px;
+}
 
 #unique_paragraph {
     font-size: 20px;
+    color: orange;
 }
 
+/* Adding animation */
+#anim_btn {
+    animation: translate_world 2s infinite ease-in-out;
+}
 
+@keyframes translate_world {
+    0% {
+        transform: translateX(10vw);
+    }
+    100% {
+        transform: translateX(20vw);
+    }
+}
