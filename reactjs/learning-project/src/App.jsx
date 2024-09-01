@@ -1,74 +1,83 @@
 import React from 'react';
-import clsx from 'clsx';
-import useFetchUsers from './hooks/useFetchUsers';
-import './App.css';
+import UserCard from './components/user_card';
+import { ProductCard } from './components/product_card';
+import "./App.css";
+import { Counter } from './components/counter';
+import CustomTitle from './components/title';
+import Form from './components/form';
 
-
-// Composant reusable.
-function Box({ color, onClick, selected }) {
-    return (
-        <div onClick={onClick} className={clsx(
-            "rounded-lg text-white size-32 flex items-center justify-center",
-            `${color}`,
-            "transition duration-300",
-            `${selected && "-translate-y-6 rotate-180 duration-500"}`,
-
-        )}>
-            <span className={`${selected && "-rotate-180"}`}>
-                {color}
-            </span>
-        </div>
-    )
+// this is NOT a component. It's just a normal
+// javascript function. Notice the first letter
+// of the name. It's not fulfilling the naming
+// rule of a React Component. It's just a 
+// utility function.
+function sayGreeting(name) {
+  return <p>Hello, {name}</p>
 }
-
-
-function UserCard({ data }) {
-    return (
-        <div>
-            <div className='flex flex-col items-center'>
-                <img src={data.avatar} alt={data.name} className='w-32 h-32 rounded-full object-cover' />
-                <h2 className='mt-4 text-xl'>{data.name}</h2>
-                <p>{data.email}</p>
-            </div>
-        </div>
-    )
-}
-
 
 export default function App() {
-    const colors = ['bg-blue-400', 'bg-orange-600', 'bg-green-400', 'bg-yellow-400'];
 
-    const URL = 'https://jsonplaceholder.typicode.com/todos';
-
-    // State (etats)
-    const [colorIndex, setColorIndex] = React.useState(null);
-    const { users } = useFetchUsers();
-    console.log(users);
+  const [user, setUser] = React.useState(null);
+  const [timer, setTimer] = React.useState(0);
 
 
-    // Méthodes (fonctions)
-    const selectColor = (id) => {
-        setColorIndex(id);
-    }
+  // const authUser = {
+  //   id: 'a354ds3f545a34f',
+  //   name: 'Valentin',
+  //   lastName: 'MEYANUI',
+  //   createdAt: '2018-11-20T00:00 UTC 2015',
+  //   email: 'valentin@example.com',
+  //   age: 34
+  // };
 
+  return (
+    <div>
+      <MyCustomButton
+        content="Ted is late"
+        type="purple"
+      />
+      <p>Bonjour a tous !</p>
 
-    // Rendu (affichage)
-    return (
-        <div className='w-full h-screen flex flex-col items-center justify-center'>
-            <div className={`myAnim transition duration-300 size-44 ${colorIndex !== null ? `${colors[colorIndex]}` : "bg-gray-300"} rounded-lg my-6`}></div>
+      {sayGreeting("Daniel")}
 
-            <div className='flex space-x-4 items-center mt-32'>
-                {
-                    colors.map((color, index) => (
-                        <Box
-                            key={index}
-                            color={color}
-                            onClick={() => selectColor(index)}
-                            selected={colorIndex === index}
-                        />
-                    ))
-                }
-            </div>
-        </div>
-    )
+      <MyCustomButton
+        content="Ted is late"
+        type='red'
+      />
+      <MyCustomButton
+        content="Ted is late"
+        type='green'
+      />
+      <MyCustomButton />
+      {/* <UserCard userInfos={authUser} /> */}
+
+      <Counter />
+
+      <Form />
+
+      <ProductCard />
+    </div>
+  )
 }
+
+export function MyCustomButton({ content, bgColor, action }) {
+
+  const styling = {
+    backgroundColor: bgColor || '#404040',
+    color: "white",
+    padding: "10px 20px",
+    borderRadius: "5px",
+    cursor: "pointer",
+    margin: 10,
+    width: '60%'
+  }
+
+  return <button onClick={action} className='custom_button' style={styling}>
+    {content || "Click me!"}
+  </button>
+}
+
+
+
+
+

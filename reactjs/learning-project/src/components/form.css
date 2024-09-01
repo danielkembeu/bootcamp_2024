@@ -1,0 +1,22 @@
+form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+form input {
+    background: white;
+    border: 2px solid lightgray;
+    padding: 4px 6px;
+    margin: 6px;
+    border-radius: 6px;
+    width: 76%;
+}
+
+form button {
+    position: relative;
+    left: 60px;
+    background: linear-gradient(30deg, #e61313, #f22cd7);
+    color: white;
+}

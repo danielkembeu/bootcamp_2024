@@ -1,0 +1,25 @@
+What we did yesterday.
+
+1. See how components can be reused.
+2. How to import and use a component from another file
+3. How to configure a component using props.
+4. How to style a component using props.
+5. How to use JavaScript within a html element.
+6. The DRY principle.
+
+
+
+Today:
+1. Destructuring (ES6 feature)
+2. useState hook
+3. Updating a state by its setter function.
+4. (extras) Reusable component -> MyCustomButton.
+
+
+EXERCICE:
+
+1. Create a Reusable component which is called CustomTitle that contains a label with the icon `>` at the right. It has to be in his own file.
+
+2. Create a simple form that contains just one styled input and a button at the bottom right side of it, with the header being that custom component, coming from the definition file.
+
+3. Call to form components and passing the appropriate props in the App.jsx/tsx in order to display them.

@@ -1,4 +1,4 @@
-/* 
+/* /* 
     Choose the tag to style (the selector)
     add styling. (Properties and values)
 
@@ -7,6 +7,7 @@
 
 */
 
+/*
 * {
     font-family: "Montserrat", "sans-serif";
     font-weight: 500;
@@ -41,11 +42,12 @@ i {
     color: orange;
 }
 
-/* Adding animation */
+/* Adding animation 
 #anim_btn {
     animation: translate_world 2s infinite ease-in-out;
 }
-
+*/
+/*
 @keyframes translate_world {
     0% {
         transform: translateX(10vw);
@@ -54,3 +56,7 @@ i {
         transform: translateX(20vw);
     }
 }
+
+
+
+ */

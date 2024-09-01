@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: lightgray;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: #e919df;
+    margin: 10px;
+    flex: 1;
+    animation: spin 3s forwards infinite;
+}
+
+.box2 {
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #e9bf19;
+    margin: 10px;
+    flex: 2;
+}
+
+.box3 {
+    opacity: .1;
+    width: 100px;
+    height: 100px;
+    background-color: #19c3e9;
+    margin: 10px;
+    flex: 3;
+}
+
+.container {
+    font-family: "Poppins", "Helvetica Neue", "Helvetica";
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;    
+    padding: 20px;
+    position: relative;
+    background-color: white;
+
+    /* Layout systems */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+ }
+
+ .left_part {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #19c3e9;
+
+    /* Center everything to the middle of my (left part) div. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+ }
+
+
+ .middle_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+ }
+
+ .middle_part p {
+    margin: 0;
+ }
+
+ .middle_part h3 {
+    margin: -10px;
+    font-size: 16px;
+
+ }
+
+ .right_part img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 30px;
+ }
+
+ .right_part div {
+    margin-right: 10px;
+    position: absolute;
+    top: 28%;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+
+    background-color: lightgray;
+    /* padding: 6px; */
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+ }
